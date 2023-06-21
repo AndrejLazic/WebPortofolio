@@ -1,9 +1,30 @@
+.light-theme {
+    background-color: white;
+    color: #333;
+}
+  
+.dark-theme {
+    background-color: #333;
+    color: white;
+}
+
 .srb {
     display: none;
 }
 
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
 nav {
     display: inline;
+}
+
+#themeToggle {
+    height: 34px;
+    position: absolute;
+    cursor: pointer;
 }
 
 .switch {
