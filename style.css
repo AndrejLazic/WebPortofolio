@@ -12,26 +12,61 @@
     display: none;
 }
 
-a{
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     text-decoration: none;
-    color: inherit;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
 }
 
-nav {
-    display: inline;
-}
-
-#themeToggle {
-    height: 34px;
-    position: absolute;
-    cursor: pointer;
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
 }
 
 .switch {
     position: relative;
     display: inline-block;
+    margin-right: auto;
     width: 60px;
     height: 34px;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 7%;
+    background: yellowgreen;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+}
+
+#themeToggle {
+    position: relative;
+    cursor: pointer;
+    margin-left: 50px;
+    height: 34px;
+}
+
+.eng a{
+    color: inherit;
+    font-size: 1.7rem;
+    font-weight: 500;
+    margin-right: 3.5rem;
+}
+
+.srb a{
+    color: inherit;
+    font-size: 1.7rem;
+    font-weight: 500;
+    margin-right: 3.5rem;
 }
 
 .switch input {
@@ -83,4 +118,19 @@ input:checked + .slider:before {
   
 .slider.round:before {
     border-radius: 50%;
+}
+
+section {
+    min-height: 100vh;
+    padding: 10rem 7% 2rem;
+}
+
+.home{
+    display: flex;
+    align-items: center;
+}
+
+.home .home-content{
+    max-width: 44rem;
+
 }
