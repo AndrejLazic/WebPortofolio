@@ -41,8 +41,8 @@ header{
     top: 0;
     left: 0;
     width: 100%;
-    padding: 2rem 7%;
-    background: yellowgreen;
+    padding: 5rem 7%;
+    background-color:inherit ;
     display: flex;
     align-items: center;
     z-index: 100;
@@ -51,22 +51,25 @@ header{
 #themeToggle {
     position: relative;
     cursor: pointer;
-    margin-left: 50px;
-    height: 34px;
+    color: inherit;
+    margin-left: 15rem;
+    width: 4rem;
+    height: 4rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
 }
 
-.eng a{
+header nav a{
     color: inherit;
-    font-size: 1.7rem;
-    font-weight: 500;
-    margin-right: 3.5rem;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-right: 5rem;
 }
 
-.srb a{
-    color: inherit;
-    font-size: 1.7rem;
-    font-weight: 500;
-    margin-right: 3.5rem;
+header nav a:hover{
+    color: yellowgreen;
 }
 
 .switch input {
@@ -82,7 +85,7 @@ header{
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
+    background-color: yellowgreen;
     -webkit-transition: .4s;
     transition: .4s;
 }
@@ -101,7 +104,7 @@ header{
 }
   
 input:checked + .slider {
-    background-color: #ccc;
+    background-color: yellowgreen;
 }
   
 input:checked + .slider:before {
@@ -131,6 +134,58 @@ section {
 }
 
 .home .home-content{
-    max-width: 44rem;
+    max-width: 70rem;
 
+}
+.home-content h3{
+    font-size: 3.2rem;
+    font-weight: 600;
+}
+
+.home-content h1{
+    font-size: 5.6rem;
+    font-weight: 700;
+}
+
+.home-content p{
+    font-size: 2.3rem;
+    line-height: 1.3;
+}
+
+.home-content .social-media a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: .2rem solid inherit;
+    border-radius: 50%;
+    box-shadow: 0 .2rem .5rem yellowgreen;
+    font-size: 2rem;
+    color: inherit;
+    margin: 2.5rem 1.5rem 3rem 0;
+    transition: .5s ease;
+}
+
+.home-content .social-media a:hover{
+    background-color: yellowgreen;
+    color: inherit;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1.2rem 2.8rem;
+    background-color: inherit;
+    color: inherit;
+    border-radius: .6rem;
+    box-shadow: 0 .2rem .5rem yellowgreen;
+    font-size: 2rem;
+    letter-spacing: .1rem;
+    font-weight: 700;
+    
+}
+
+.btn:hover{
+    background-color: yellowgreen;
 }

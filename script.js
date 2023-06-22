@@ -24,9 +24,11 @@ $(document).ready(function() {
       if (currentTheme === 'light-theme') {
         currentTheme = 'dark-theme';
         body.removeClass('light-theme').addClass('dark-theme');
+        $('#themeToggle').removeClass('bxs-moon').addClass('bxs-sun');;
       } else {
         currentTheme = 'light-theme';
         body.removeClass('dark-theme').addClass('light-theme');
+        $('#themeToggle').removeClass('bxs-sun').addClass('bxs-moon');
       }
     });
   });
