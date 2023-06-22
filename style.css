@@ -41,7 +41,7 @@ header{
     top: 0;
     left: 0;
     width: 100%;
-    padding: 5rem 7%;
+    padding: 5rem 8rem 1.2rem 13rem;
     background-color:inherit ;
     display: flex;
     align-items: center;
@@ -52,7 +52,7 @@ header{
     position: relative;
     cursor: pointer;
     color: inherit;
-    margin-left: 15rem;
+    margin-left: 11rem;
     width: 4rem;
     height: 4rem;
     display: inline-flex;
@@ -63,7 +63,7 @@ header{
 
 header nav a{
     color: inherit;
-    font-size: 2rem;
+    font-size: 2.9rem;
     font-weight: 700;
     margin-right: 5rem;
 }
