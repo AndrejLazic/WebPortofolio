@@ -19,6 +19,7 @@ $(document).ready(function() {
     var themeToggle = $('#themeToggle');
     var body = $('body');
     var currentTheme = 'light-theme';
+    body.addClass('light-theme');
   
     themeToggle.click(function() {
       if (currentTheme === 'light-theme') {
