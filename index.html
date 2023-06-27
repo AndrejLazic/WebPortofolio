@@ -9,6 +9,10 @@
     <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
     <!-- ikonice -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!--typed text-->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <!--send email-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
@@ -40,12 +44,13 @@
         <i class='bx bxs-moon' id="themeToggle"></i>
     </header>
 
-    <body>
+    
         <section class="home" id="home">
 
             <div class="home-content eng">
-                <h3>Hello, I am</h3>
+                <h3>Hello, my name is</h3>
                 <h1>Andrej Lazić</h1>
+                <h2 class="my-profesion">I' am a <span class="typingEng"></span></h2>
                 <p>
                     Student on final year at the Faculty of Technical Sciences, specializing in Computer 
                     Science and Automation, and I am a passionate enthusiast in the field of Web and Software 
@@ -66,8 +71,9 @@
             </div>
 
             <div class="home-content srb">
-                <h3>Ćaos, ja sam</h3>
+                <h3>Ćaos, moje ime je</h3>
                 <h1>Andrej Lazić</h1>
+                <h2 class="my-profesion">Ja sam <span class="typingSrb"></span></h2>
                 <p>
                     Student sam završne godine na Fakultetu tehničkih nauka, smer Računarstvo i automatika,
                     i strastveni sam entuzijasta u oblasti Web i Software development-a. Ovde možeš pronaći sve
@@ -89,10 +95,9 @@
         </section>
 
         <section id="about">
-            <h2 class="eng">About<span> me</span></h2>
-            <h2 class="srb">O<span> meni</span></h2>
             <div class="about">
                 <div class="about-content eng">
+                    <h2 class="eng">About<span> me</span></h2>
                     <p>Born in 1995 in Vrbas, but I grew up in Sombor, where I completed my primary and secondary 
                         education. I am currently 27 years old.
                         <br><br>
@@ -117,6 +122,10 @@
                 </div>
 
                 <div class="about-info eng">
+                    <div class="about-image">
+                        <img src="CV1.jpg" alt="Andrej Lazić Image">
+                        <span class="circle-spin"></span>
+                    </div>
                     <p><span>Born:</span> 23. july 1995.</p>
                     <p><span>Age:</span> 27</p>
                     <p><span>Email:</span> ane.lazic@gmail.com</p>
@@ -125,6 +134,7 @@
                 </div>
 
                 <div class="about-content srb">
+                    <h2 class="srb">O<span> meni</span></h2>
                     <p>Rođen sam 1995. godine u Vrbasu, ali sam odrastao u Somboru, gde sam završio osnovnu 
                         i srednju školu. Trenutno imam 27 godina. 
                         <br><br>
@@ -148,6 +158,7 @@
                 </div>
 
                 <div class="about-info srb">
+                    <img src="CV1.jpg" alt="Andrej Lazić Slika">
                     <p><span>Rođen:</span> 23. jul 1995.</p>
                     <p><span>Godine:</span> 27</p>
                     <p><span>Email:</span> ane.lazic@gmail.com</p>
@@ -158,9 +169,11 @@
             </div>
         </section>
             
-        <section id="skill">
-            <h2 class="eng">Skills</h2>
-            <h2 class="srb">Veštine</h2>
+        <section id="skill" class="skill">
+            <h2 class="heading eng">Skills</h2>
+            <h2 class="heading srb">Veštine</h2>
+
+
         </section>
             
         <section id="projects">
@@ -169,7 +182,7 @@
         </section>
 
         <section class="contact" id="contact">
-            <h2 class="heading eng"> Contact <span>Me!</span></h2>
+            <h2 class="heading eng">Contact <span>Me!</span></h2>
             <h2 class="heading srb">Kontaktiraj <span>Me!</span></h2>
 
             <form class="eng" action="#">
@@ -187,14 +200,14 @@
 
             <form class="srb" action="#">
                 <div class="input-box">
-                    <input type="email" placeholder="Email">
+                    <input type="email" name="user-name" required placeholder="Email">
                 </div>
 
                 <div class="input-box">
-                    <input type="text" placeholder="Tema email-a">
+                    <input type="text" name="usse-email" required placeholder="Tema email-a">
                 </div>
 
-                <textarea name="" id="" cols="30" rows="10" placeholder="Vaša poruka"></textarea>
+                <textarea name="user-project" required id="" cols="30" rows="10" placeholder="Vaša poruka"></textarea>
                 <input type="submit" value="Pošalji poruku" class="btn">            
             </form>
         </section>
@@ -208,7 +221,22 @@
                 <a href="#home"><i class='bx bxs-upvote'></i></a>
             </div>
         </footer>
-    </body>
-    
+
+        <!--typed text-->
+        <script>
+            var typed = new Typed(".typingEng", {
+                strings:["Frontend Developer","Web Developer","Software Developer"],
+                typeSpeed:100,
+                loop:true,
+            });
+        </script>
+
+        <script>
+            var typed = new Typed(".typingSrb", {
+                strings:["Frontend Developer","Web Developer","Software Developer"],
+                typeSpeed:100,
+                loop:true,
+            });
+        </script>
 </body>
 </html>
