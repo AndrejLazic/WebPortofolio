@@ -12,7 +12,7 @@
     <!--typed text-->
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <!--send email-->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
@@ -51,6 +51,13 @@
                 <h3>Hello, my name is</h3>
                 <h1>Andrej Lazić</h1>
                 <h2 class="my-profesion">I' am a <span class="typingEng"></span></h2>
+                <script>
+                    var typed = new Typed(".typingEng", {
+                        strings:["Frontend Developer","Web Developer","Software Developer"],
+                        typeSpeed:100,
+                        loop:true,
+                    });
+                </script>
                 <p>
                     Student on final year at the Faculty of Technical Sciences, specializing in Computer 
                     Science and Automation, and I am a passionate enthusiast in the field of Web and Software 
@@ -74,6 +81,13 @@
                 <h3>Ćaos, moje ime je</h3>
                 <h1>Andrej Lazić</h1>
                 <h2 class="my-profesion">Ja sam <span class="typingSrb"></span></h2>
+                <script>
+                    var typed = new Typed(".typingSrb", {
+                        strings:["Frontend Developer","Web Developer","Software Developer"],
+                        typeSpeed:100,
+                        loop:true,
+                    });
+                </script>
                 <p>
                     Student sam završne godine na Fakultetu tehničkih nauka, smer Računarstvo i automatika,
                     i strastveni sam entuzijasta u oblasti Web i Software development-a. Ovde možeš pronaći sve
@@ -158,7 +172,10 @@
                 </div>
 
                 <div class="about-info srb">
-                    <img src="CV1.jpg" alt="Andrej Lazić Slika">
+                    <div class="about-image">
+                        <img src="CV1.jpg" alt="Andrej Lazić Image">
+                        <span class="circle-spin"></span>
+                    </div>
                     <p><span>Rođen:</span> 23. jul 1995.</p>
                     <p><span>Godine:</span> 27</p>
                     <p><span>Email:</span> ane.lazic@gmail.com</p>
@@ -185,30 +202,30 @@
             <h2 class="heading eng">Contact <span>Me!</span></h2>
             <h2 class="heading srb">Kontaktiraj <span>Me!</span></h2>
 
-            <form class="eng" action="#">
+            <form class="eng" id="formEng">
                 <div class="input-box">
-                    <input type="email" placeholder="Email">
+                    <input type="email" name="user_email" placeholder="Email">
                 </div>
 
                 <div class="input-box">
-                    <input type="text" placeholder="Email Subject">
+                    <input type="text" name="user_subject" placeholder="Email Subject">
                 </div>
 
-                <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
-                <input type="submit" value="Send Message" class="btn">            
+                <textarea name="user_message" cols="30" rows="10" placeholder="Your Message"></textarea>
+                <input type="submit" value="Send Message" class="btn">           
             </form>
 
-            <form class="srb" action="#">
+            <form class="srb" action="#" id="formSrb">
                 <div class="input-box">
-                    <input type="email" name="user-name" required placeholder="Email">
+                    <input type="email" name="user_email" required placeholder="Email">
                 </div>
 
                 <div class="input-box">
-                    <input type="text" name="usse-email" required placeholder="Tema email-a">
+                    <input type="text" name="user_subject" required placeholder="Tema email-a">
                 </div>
 
-                <textarea name="user-project" required id="" cols="30" rows="10" placeholder="Vaša poruka"></textarea>
-                <input type="submit" value="Pošalji poruku" class="btn">            
+                <textarea name="user_message" required cols="30" rows="10" placeholder="Vaša poruka"></textarea>
+                <input type="submit" value="Pošalji poruku" class="btn">   
             </form>
         </section>
 
@@ -222,21 +239,40 @@
             </div>
         </footer>
 
-        <!--typed text-->
         <script>
-            var typed = new Typed(".typingEng", {
-                strings:["Frontend Developer","Web Developer","Software Developer"],
-                typeSpeed:100,
-                loop:true,
-            });
+            const contactForm = document.getElementById('formEng');
+
+            const sendEmail = (e) =>{
+                e.preventDefault()
+
+                //serviceID - templateID - #form - publicKey
+                emailjs.sendForm('service_9tis45v', 'template_acyoze5', '#formEng', '0MyMuLS2qPS9lp3Ep')
+                .then(()=>{
+                    alert("Message sent successfully");
+                },() =>{
+                    alert("Message not sent (service error)");
+                })
+            }
+
+            contactForm.addEventListener('submit', sendEmail);
         </script>
 
         <script>
-            var typed = new Typed(".typingSrb", {
-                strings:["Frontend Developer","Web Developer","Software Developer"],
-                typeSpeed:100,
-                loop:true,
-            });
+            const contactFormSrb = document.getElementById('formSrb');
+
+            const sendEmailSrb = (e) =>{
+                e.preventDefault()
+
+                //serviceID - templateID - #form - publicKey
+                emailjs.sendForm('service_9tis45v', 'template_acyoze5', '#formSrb', '0MyMuLS2qPS9lp3Ep')
+                .then(()=>{
+                    alert("Uspešno poslat email");
+                },() =>{
+                    alert("Email nije poslat (service error)");
+                })
+            }
+
+            contactFormSrb.addEventListener('submit', sendEmailSrb);
         </script>
 </body>
 </html>
