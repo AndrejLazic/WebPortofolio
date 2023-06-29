@@ -28,6 +28,10 @@ html{
     overflow-x: hidden;
 }
 
+span{
+    color: yellowgreen;
+}
+
 .switch {
     position: relative;
     display: inline-block;
@@ -268,25 +272,68 @@ section {
     font-size: 5.6rem;
     font-weight: 700;
     padding: 4rem 0rem 4rem 0rem;
+    color: yellowgreen;
+}
+
+.skill-layout{
+    display: flex;
+}
+
+.skill-box{
+    flex: 10;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.skill-title{
+    text-align: center;
+    justify-content: center;
+    padding: 5rem;
+}
+
+.skill-title img{
+    border-radius: 50%;
+    height: 20rem;
+    width: 20rem;
+    transition: .5s ease;
+}
+
+.skill-title img:hover{
+    transform: scale(1.1);
+    box-shadow: .2rem .2rem .9rem yellowgreen;
+}
+
+.skill-title h3{
+    padding: 1rem;
+    font-size: 3rem;
+    color: inherit;
+}
+
+.skill .skill-text{
+    color: inherit;
+    flex: 6;
+    font-size: 3rem;
+    padding: 2rem;
+    text-align: justify;
+}
+
+.contact{
+    min-height: auto;
 }
 
 .contact h2{
     text-align: center;
     font-size: 5.6rem;
     font-weight: 700;
-    padding: 4rem;
-    margin-top: 5rem;
-}
-
-span{
-    color: yellowgreen;
+    padding: 3rem;
+    margin-top: 1rem;
 }
 
 .contact form{
     max-width: 100rem;
     margin: 1rem auto;
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 15rem;
 }
 
 .contact form .input-box{
@@ -329,7 +376,6 @@ footer{
     color: inherit;
     font-size: 2rem;
     font-weight: 400;
-
 }
 
 .footer-iconTop a{
