@@ -1,11 +1,14 @@
 .light-theme {
     background-color: white;
     color: #333;
+    --accent-color: yellowgreen;
+    
 }
   
 .dark-theme {
     background-color: #333;
     color: white;
+    --accent-color: #FFD700;
 }
 
 .srb {
@@ -29,7 +32,7 @@ html{
 }
 
 span{
-    color: yellowgreen;
+    color: var(--accent-color);
 }
 
 .switch {
@@ -73,7 +76,7 @@ header nav a{
 }
 
 header nav a:hover{
-    color: yellowgreen;
+    color: var(--accent-color);
 }
 
 .switch input {
@@ -89,7 +92,7 @@ header nav a:hover{
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: yellowgreen;
+    background-color: var(--accent-color);
     -webkit-transition: .4s;
     transition: .4s;
 }
@@ -108,7 +111,7 @@ header nav a:hover{
 }
   
 input:checked + .slider {
-    background-color: yellowgreen;
+    background-color: var(--accent-color);
 }
   
 input:checked + .slider:before {
@@ -171,7 +174,7 @@ section {
     background: transparent;
     border: .2rem solid inherit;
     border-radius: 50%;
-    box-shadow: 0 .2rem .5rem yellowgreen;
+    box-shadow: 0 .2rem .5rem var(--accent-color);
     font-size: 2rem;
     color: inherit;
     margin: 2.5rem 1.5rem 3rem 0;
@@ -179,7 +182,7 @@ section {
 }
 
 .home-content .social-media a:hover{
-    background-color: yellowgreen;
+    background-color: var(--accent-color);
     color: inherit;
 }
 
@@ -189,14 +192,14 @@ section {
     background-color: inherit;
     color: inherit;
     border-radius: .6rem;
-    box-shadow: .2rem .2rem .5rem yellowgreen;
+    box-shadow: .2rem .2rem .5rem var(--accent-color);
     font-size: 2rem;
     letter-spacing: .1rem;
     font-weight: 700;
 }
 
 .btn:hover{
-    background-color: yellowgreen;
+    background-color: var(--accent-color);
 }
 
 .about{
@@ -219,7 +222,7 @@ section {
 }
 
 .about .about-content a{
-    color: yellowgreen;
+    color: var(--accent-color);
     text-decoration: underline;
 }
 
@@ -243,7 +246,7 @@ section {
     margin-top: 2rem;
     width: 90%;
     border-radius: 50%;
-    border: .4rem solid yellowgreen;
+    border: .4rem solid var(--accent-color);
 }
 
 .about .about-info .about-image .circle-spin{
@@ -254,17 +257,17 @@ section {
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    border-bottom: .5rem dashed yellowgreen;
-    border-top: .5rem dashed yellowgreen;
-    border-left: .5rem solid yellowgreen;
-    border-right: .5rem solid yellowgreen;
+    border-bottom: .5rem dashed var(--accent-color);
+    border-top: .5rem dashed var(--accent-color);
+    border-left: .5rem solid var(--accent-color);
+    border-right: .5rem solid var(--accent-color);
     animation: aboutSpinner 8s linear infinite;
 }
 
 .about .about-info p{
     text-align: left;
     padding: 1.5rem;
-    border-bottom: .2rem solid yellowgreen;
+    border-bottom: .2rem solid var(--accent-color);
     margin-top: 1rem;
 }
 
@@ -272,7 +275,7 @@ section {
     font-size: 5.6rem;
     font-weight: 700;
     padding: 4rem 0rem 4rem 0rem;
-    color: yellowgreen;
+    color: var(--accent-color);
 }
 
 .skill-layout{
@@ -300,7 +303,7 @@ section {
 
 .skill-title img:hover{
     transform: scale(1.1);
-    box-shadow: .2rem .2rem .9rem yellowgreen;
+    box-shadow: .2rem .2rem .9rem var(--accent-color);
 }
 
 .skill-title h3{
@@ -351,7 +354,7 @@ section {
     background-color: inherit;
     border-radius: .8rem;
     margin: .9rem 0;
-    box-shadow: 0 .1rem .5rem yellowgreen;
+    box-shadow: 0 .1rem .5rem var(--accent-color);
 }
 
 .contact form textarea{
@@ -369,13 +372,13 @@ footer{
     align-items: center;
     flex-wrap: wrap;
     padding: 2rem 7%;
-    background-color: yellowgreen;
+    background-color: var(--accent-color);
 }
 
 .footer-text p{
     color: inherit;
     font-size: 2rem;
-    font-weight: 400;
+    font-weight: 700;
 }
 
 .footer-iconTop a{
@@ -385,7 +388,7 @@ footer{
     color: inherit;
     padding: .2rem;
     border-radius: .8rem;
-    border: .2rem solid yellowgreen;
+    border: .2rem solid var(--accent-color);
     outline: .2rem solid transparent;
     transition: .5s ease;
 }
