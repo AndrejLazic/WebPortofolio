@@ -35,12 +35,3 @@ $(document).ready(function() {
     }
   });
 });
-/*
-window.addEventListener('scroll', function() {
-  var header = document.querySelector('header');
-  var scrolled = window.scrollY > 0;
-  header.classList.toggle('scrolled', scrolled);
-});
-*/
-
-

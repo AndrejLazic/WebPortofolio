@@ -1,22 +1,24 @@
 .light-theme {
-    background-color: #e1e1e1;
-    color: #333;
+    background-color: hsl(40, 48%, 88%);
+    color: hsl(40, 48%, 12%);
 
-    --accent-color: yellowgreen;
-    --text-color: #333;
-    --background-color: #e1e1e1;
+    --accent-color: brown;
+    --text-color: hsl(40, 48%, 12%);
+    --first-background-color: hsl(40, 48%, 83%);
+    --second-background-color: hsl(40, 48%, 78%);
 
     transition: .5s ease;
 }
   
 .dark-theme {
-    background-color: #333;
-    color: #e1e1e1;
+    background-color: #081b29;
+    color: #ededed;
 
-    --accent-color: #FFD700;
-    --text-color: #e1e1e1;
-    --background-color: #333;
-    
+    --accent-color: #00abf0;
+    --text-color: #ededed;
+    --first-background-color: #081b29;
+    --second-background-color: #112e42;
+
     transition: .5s ease;
 }
 
@@ -60,7 +62,7 @@ header{
     left: 0;
     width: 100%;
     padding: 4rem 8rem 2rem 13rem;
-    background-color:var(--background-color) ;
+    background-color:var(--first-background-color) ;
     display: flex;
     align-items: center;
     z-index: 100;
@@ -158,6 +160,7 @@ section {
 .home{
     display: flex;
     align-items: center;
+    background-color: var(--first-background-color);
 }
 
 .home .home-content{
@@ -225,6 +228,9 @@ section {
 
 /*================= ABOUT =================*/
 
+#about{
+    background-color: var(--second-background-color);
+}
 .about{
     display: flex;
 }
@@ -296,6 +302,10 @@ section {
 
 /*================= SKILLS =================*/
 
+#skill{
+    background-color: var(--first-background-color);
+}
+
 .skill h2{
     font-size: 5.6rem;
     font-weight: 700;
@@ -347,6 +357,10 @@ section {
 
 /*================= PROJECTS =================*/
 
+#projects{
+    background-color: var(--second-background-color);
+}
+
 .projects h2{
     font-size: 5.6rem;
     font-weight: 700;
@@ -367,8 +381,8 @@ section {
     border-style: solid;
     border-top-color: var(--accent-color);
     border-bottom-color: var(--accent-color);
-    border-left-color: var(--background-color);
-    border-right-color: var(--background-color);
+    border-left-color: var(--second-background-color);
+    border-right-color: var(--second-background-color);
 }
 
 .projects__content{
@@ -486,6 +500,7 @@ section {
 
 .contact{
     min-height: auto;
+    background-color: var(--first-background-color);
 }
 
 .contact h2{
@@ -515,7 +530,7 @@ section {
     padding: 1.5rem;
     font-size: 2rem;
     color: var(--text-color);
-    background-color: var(--background-color);
+    background-color: var(--second-background-color);
     border-radius: .8rem;
     margin: .9rem 0;
     box-shadow: 0 .1rem .5rem var(--accent-color);
