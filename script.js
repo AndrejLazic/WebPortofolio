@@ -5,13 +5,15 @@ $(document).ready(function() {
   languageSwitch.change(function() {
     if (language === "english") {
         language = "serbian";
-        $(".eng").hide();
-        $(".srb").show();
-      }else {
+        $(".eng").fadeOut(300, function() {
+            $(".srb").fadeIn(300);
+        });
+    } else {
         language = "english";
-        $(".srb").hide();
-        $(".eng").show();
-      }
+        $(".srb").fadeOut(300, function() {
+            $(".eng").fadeIn(300);
+        });
+    }
   });
 });
 
@@ -33,3 +35,12 @@ $(document).ready(function() {
     }
   });
 });
+/*
+window.addEventListener('scroll', function() {
+  var header = document.querySelector('header');
+  var scrolled = window.scrollY > 0;
+  header.classList.toggle('scrolled', scrolled);
+});
+*/
+
+
