@@ -115,6 +115,10 @@
                     <a class="btn" href="Andrej Lazić CV (Srpski).pdf" download>Preuzmi CV</a>
                 </div>
             </div>
+
+            <div class="home-right">
+                <img src="profile.png" alt="Profile Picture">
+            </div>
         </section>
 
         <section id="about">
@@ -187,9 +191,10 @@
         </section>
             
         <section id="skill" class="skill">
-            <h2 class="heading eng">Skills</h2>
-            <h2 class="heading srb">Veštine</h2>
-            
+            <div class="naslov">
+                <h2 class="heading eng">Skills</h2>
+                <h2 class="heading srb">Veštine</h2>
+            </div>
             <div class="skill-layout">
                 <div class="skill-box">
 
@@ -265,9 +270,10 @@
         </section>
             
         <section id="projects" class="projects section">
-            
-            <h2 class="eng">Projects</h2>
-            <h2 class="srb">Projekti</h2>
+            <div class="naslov">
+                <h2 class="heading eng">Projects</h2>
+                <h2 class="heading srb">Projekti</h2>
+            </div>
 
             <div class="container section__border">
                 <div class="projects__container swiper">
@@ -277,10 +283,20 @@
                             <div class="image-container">
                                 <img class="projects__img" src="project-img.png" alt="Projects image">
                                 <div class="overlay">
-                                    <h3 class="eng">Sample text 1</h3>
-                                    <p class="eng">Sample text Sample text Sample text Sample text</p>
-                                    <h3 class="srb">Neki text 1</h3>
-                                    <p class="srb">Neki text Neki text Neki text Neki text Neki text</p>
+                                    <p class="eng">
+                                        Project within the internship I worked on at "INDAS D.O.O."
+                                        <br><br>
+                                        The task was to create news articles obtained from multiple
+                                        different APIs and using the CSS Framework "Bootstrap" to make the website
+                                        responsive and visually resemble the "Vukajlija" website.
+                                    </p>
+                                    <p class="srb">
+                                        Projekat u okviru prakse koju sam radio u firmi "INDAS D.O.O."
+                                        <br><br>
+                                        Zadatak je bio da se naprave vesti koje su se pribavljale preko više 
+                                        različitih API-ja, i koristieći CSS Framework "Bootstrap" napavit da web
+                                        stranica bude responsive i da dizajnom liči na website "Vukajlija"
+                                    </p>
                                 </div>
                             </div>
                             <div class="projects__subtitle">
@@ -295,10 +311,24 @@
                             <div class="image-container">
                                 <img class="projects__img" src="project-img.png" alt="Projects image">
                                 <div class="overlay">
-                                    <h3 class="eng">Sample text 2</h3>
-                                    <p class="eng">Sample text Sample text Sample text Sample text</p>
-                                    <h3 class="srb">Neki text 2</h3>
-                                    <p class="srb">Neki text Neki text Neki text Neki text Neki text</p>
+                                    <p class="eng">
+                                        The task presented as a challenge by "VEGA IT" company.
+                                        <br><br>
+                                        The goal of the task is to create an algorithm that calculates the fields
+                                        that are not flooded, represented by white squares. The user will mark the fields
+                                        on the grid that they want to represent a road, indicated by black squares,
+                                        and the algorithm should color the squares in blue, indicating the squares that
+                                        have a "road" (black square) on both their left and right sides.
+                                    </p>
+                                    <p class="srb">
+                                        Zadatak koji je predstavljen kao izazov od strane firme "VEGA IT".
+                                        <br><br>
+                                        Cilj zadatka je da se napravi algoritam koji će izračunavati polja
+                                        koja nisu poplavljena, bele kvadratiće. Korisnik će na matrici
+                                        obeležavati polja koja želi da predsavljaju put, odnosno crne kvadratiće,
+                                        a algoritam treba da oboji kvadratiće u plavo, odnosno one kvadratiće koje 
+                                        i levo i desno od sebe imaju "put" (crni kvadratić). 
+                                    </p>
                                 </div>
                             </div>
                             <div class="projects__subtitle">
@@ -313,16 +343,26 @@
                             <div class="image-container">
                                 <img class="projects__img" src="project-img.png" alt="Projects image">
                                 <div class="overlay">
-                                    <h3 class="eng">Sample text 3</h3>
-                                    <p class="eng">Sample text Sample text Sample text Sample text</p>
-                                    <h3 class="srb">Neki text 3</h3>
-                                    <p class="srb">Neki text Neki text Neki text Neki text Neki text</p>
+                                    <p class="eng">
+                                        A personal project done on the "SOLOLEARN" website.
+                                        <br><br>
+                                        The task was to facilitate understanding of various sorting algorithms
+                                        by visually demonstrating the step-by-step process of each algorithm.
+                                        The user has the ability to choose the sorting algorithm according to their preference.
+                                    </p>
+                                    <p class="srb">
+                                        Lični projekat koji je rađen na sajtu "SOLOLEARN".
+                                        <br><br>
+                                        Zadatak bi trebalo da lakše omogući shvatanje različitih algoritama za
+                                        sortiranje, tako što vizuelno prikazuje rad algoritma korak po korak.
+                                        Korisnik je u mogućnosti da izabere algoritam za sortiranje po njegovoj želji.
+                                    </p>
                                 </div>
                             </div>
                             <div class="projects__subtitle">
                                 <h1 class="projects__title eng">Sorting Algorithms</h1>
                                 <h1 class="projects__title srb">Sortirajući Algoritmi</h1>
-                                <a href="#" class="projects__button">View Demo<i class='bx bx-right-arrow-alt'></i></a>
+                                <a href="https://www.sololearn.com/compiler-playground/WY9CenSnItmU" target="_blank" class="projects__button">View Demo<i class='bx bx-right-arrow-alt'></i></a>
                             </div>
                         </div>
 
@@ -331,16 +371,36 @@
                             <div class="image-container">
                                 <img class="projects__img" src="project-img.png" alt="Projects image">
                                 <div class="overlay">
-                                    <h3 class="eng">Sample text 4</h3>
-                                    <p class="eng">Sample text Sample text Sample text Sample text</p>
-                                    <h3 class="srb">Neki text 4</h3>
-                                    <p class="srb">Neki text Neki text Neki text Neki text Neki text</p>
+                                    <p class="eng">
+                                        A website that will make it easier for me to track my collection.
+                                        <br><br>
+                                        I have a collection of cans (mostly beer cans) that is becoming increasingly
+                                        difficult to keep track of due to its growing size. The idea of this website is to easily check
+                                        whether I have a particular can or not.
+                                        <br><br>
+                                        There will be an SQL server that will contain a table of cans with all the associated parameters,
+                                        including an image of the can itself. By reading data from the SQL, I will create a web page
+                                        that will display all this information. There will also be an option to add a new
+                                        can to the SQL table via the website.
+                                    </p>
+                                    <p class="srb">
+                                        Web sajt koji će mi olakšati praćenje kolekcije.
+                                        <br><br>
+                                        Posedujem kolekciju limenki (pretežno limenki piva) koju je, sa sve većim
+                                        obimom, sve teže ispratiti. Ideja ovog sajta je da uvek lako mogu proverit
+                                        da li posedujem određenu limenku ili ne.
+                                        <br><br>
+                                        Postojaće SQL server, koji će sadržati tabelu limenki sa svim pratećim parametrima
+                                        kao i sa slikom same limenke. Čitajući podatke iz SQL-a, napraviću web stranicu
+                                        koja će prikazivati sve te podatke. Takođe će bit opcija za ubacivanje nove 
+                                        limenke u SQL tabelu preko sajta.
+                                    </p>
                                 </div>
                             </div>
                             <div class="projects__subtitle">
                                 <h1 class="projects__title eng">Personal Can Collection</h1>
                                 <h1 class="projects__title srb">Lična Kolekcija Konzervi</h1>
-                                <a href="#" class="projects__button">In progress...<i class='bx bx-right-arrow-alt'></i></a>
+                                <a class="projects__button">In progress...</i></a>
                             </div>
                         </div>
                     </div>
@@ -375,8 +435,10 @@
         </section>
 
         <section class="contact" id="contact">
-            <h2 class="heading eng">Contact <span>Me!</span></h2>
-            <h2 class="heading srb">Kontaktiraj <span>Me!</span></h2>
+            <div class="naslov">
+                <h2 class="heading eng">Contact <span>Me!</span></h2>
+                <h2 class="heading srb">Kontaktiraj <span>Me!</span></h2>
+            </div>
 
             <div class="form">
                 <form class="eng" id="formEng">
@@ -455,13 +517,15 @@
 
         <script>
             ScrollReveal().reveal('.home-left', { delay: 200, origin: 'top',  distance: '100px', duration: 2000, reset: true});
+            ScrollReveal().reveal('.home-right', { delay: 200, origin: 'bottom',  distance: '100px', duration: 2000, reset: true});
             ScrollReveal().reveal('.about-content', { delay: 200, origin: 'left',  distance: '100px', duration: 2000, reset: true});
             ScrollReveal().reveal('.about-image', { delay: 200, origin: 'top',  distance: '100px', duration: 2000, reset: true});
             ScrollReveal().reveal('.about-age', { delay: 200, origin: 'bottom',  distance: '100px', duration: 2000, reset: true});
             ScrollReveal().reveal('.skill-layout', { delay: 200, origin: 'left',  distance: '100px', duration: 2000, reset: true});
             ScrollReveal().reveal('.skill-text', { delay: 200, origin: 'right',  distance: '100px', duration: 2000, reset: true});
             ScrollReveal().reveal('.container', { delay: 200, origin: 'right',  distance: '100px', duration: 2000, reset: true});
-            ScrollReveal().reveal('.form', { delay: 200, origin: 'top',  distance: '100px', duration: 2000, reset: true});
+            ScrollReveal().reveal('.naslov', { delay: 200, origin: 'top',  distance: '100px', duration: 500, reset: true});
+            ScrollReveal().reveal('.form', { delay: 200, origin: 'bottom',  distance: '100px', duration: 2000, reset: true});
             ScrollReveal().reveal('.footer', { delay: 200, origin: 'bottom',  distance: '100px', duration: 500, reset: true});
 
         </script>

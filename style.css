@@ -2,7 +2,7 @@
     background-color: hsl(40, 48%, 88%);
     color: hsl(40, 48%, 12%);
 
-    --accent-color: brown;
+    --accent-color: #7c4700;
     --text-color: hsl(40, 48%, 12%);
     --first-background-color: hsl(40, 48%, 83%);
     --second-background-color: hsl(40, 48%, 78%);
@@ -66,12 +66,6 @@ header{
     display: flex;
     align-items: center;
     z-index: 100;
-    transition: .5s ease;
-}
-
-header.scrolled{
-    background-color: var(--accent-color);
-    box-shadow: 0 1.5rem 2rem var(--accent-color);
     
 }
 
@@ -163,6 +157,10 @@ section {
     background-color: var(--first-background-color);
 }
 
+.home .home-left{
+    flex: 1;
+}
+
 .home .home-content{
     max-width: 70rem;
 }
@@ -199,7 +197,7 @@ section {
     border-radius: 50%;
     box-shadow: 0 .2rem .5rem var(--accent-color);
     font-size: 2rem;
-    color: black;
+    color: var(--second-background-color);
     margin: 2.5rem 1.5rem 3rem 0;
     transition: .5s ease;
 }
@@ -213,7 +211,7 @@ section {
     display: inline-block;
     padding: 1.2rem 2.8rem;
     background-color: var(--accent-color);
-    color: black;
+    color: var(--second-background-color);
     border-radius: .6rem;
     box-shadow: .2rem .2rem .5rem var(--accent-color);
     font-size: 2rem;
@@ -224,8 +222,18 @@ section {
 
 .btn:hover{
     background-color: transparent;
+    color: var(--text-color);
 }
 
+.home .home-right{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.home .home-right img{
+    animation: floatImage 4s ease-in-out infinite;
+}
 /*================= ABOUT =================*/
 
 #about{
@@ -409,23 +417,17 @@ section {
     right: 0;
     background-color: rgb(0, 0, 0, 0.75);
     overflow: hidden;
+    
     width: 100%;
     height: 0;
     transition: .5s ease;
-}
-
-.overlay h3{
-    text-align: center;
-    color: var(--accent-color);
-    font-size: 3rem;
-    padding: 1rem;
 }
 
 .overlay p{
     text-align: justify;
     color: var(--accent-color);
     font-size: 2rem;
-    padding: 1rem;
+    padding: 3rem;
 }
 
 .image-container:hover .overlay {
@@ -473,14 +475,6 @@ section {
     margin: initial;
     font-size: 6.5rem;
     color: var(--accent-color);
-}
-
-.projects__container .swiper-button-prev{
-    
-}
-
-.projects__container .swiper-button-next{
-    
 }
 
 .projects__container .swiper-pagination-bullets{
@@ -585,5 +579,19 @@ footer{
 @keyframes aboutSpinner {
     100%{
         transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes floatImage {
+    0%{
+        transform: translateY(0);
+    }
+
+    50%{
+        transform: translateY(-3rem);
+    }
+
+    100%{
+        transform: translateY(0);
     }
 }
