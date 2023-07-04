@@ -118,7 +118,7 @@ $(document).ready(function() {
 });
 
 function updateSlidesPerView() {
-    if (window.matchMedia('(max-width: 1024px)').matches) {
+    if (window.matchMedia('(max-width: 991px)').matches) {
         swiperProjects.params.slidesPerView = 1;
     } else {
         swiperProjects.params.slidesPerView = 2;

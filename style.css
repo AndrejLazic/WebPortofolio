@@ -655,6 +655,16 @@ footer{
 
 @media (max-width: 1024px){
     html{
+        font-size: 40%;
+    }
+
+    .about p{
+        font-size: 90%;
+    }
+}
+
+@media (max-width: 991px){
+    html{
         font-size: 70%;
     }
     
@@ -671,9 +681,6 @@ footer{
     header{
         display: none;
     }
-}
-
-@media (max-width: 991px){
     .projects__img{
         width: 40rem;
     }
