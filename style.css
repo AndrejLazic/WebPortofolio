@@ -262,7 +262,6 @@ section {
 
 .about .about-content{
     flex: 5;
-    width: 70%;
     font-size: 3rem;
     line-height: 1.3;
     text-align: justify;
@@ -665,42 +664,136 @@ footer{
 
 @media (max-width: 991px){
     html{
-        font-size: 70%;
-    }
-    
-    .home{
-        display: block;
-    }
-    
-    .home .home-left{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        font-size: 60%;
     }
 
     header{
         display: none;
     }
+    
+    .home{
+        flex-direction: column-reverse;
+    }
+
+    .about{
+        display: block;
+    }
+
+    .about .about-content{
+        padding-right: 0;
+    }
+    .about-content p{
+        display: block;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-info{
+        display: block;
+    }
+
+    .about-picture{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .skill-layout{
+        flex-direction: column-reverse;
+    }
+
+    .skill-box{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .projects__img{
-        width: 40rem;
+        width: 65rem;
     }
     
 }
 
-@media (max-width: 786px){
+@media (max-width: 873px){
     .projects__img{
-        width: 35rem;
+        width: 55rem;
+    }
+}
+
+@media (max-width: 786px){
+    html{
+        font-size: 50%;
+    }
+
+    .projects__img{
+        width: 55rem;
     }
 }
 
 @media (max-width: 480px){
-    
+    html{
+        font-size: 40%;
+    }
+}
+
+@media (max-width: 630px){
+    html{
+        font-size: 35%;
+    }
+
+    .projects__img{
+        width: 65rem;
+    }
+}
+
+@media (max-width: 585px){
+    .projects__img{
+        width: 57.5rem;
+    }
+}
+
+@media (max-width: 540px){
+    .projects__img{
+        width: 52rem;
+    }
+}
+
+@media (max-width: 430px){
+    html{
+        font-size: 33%;
+    }
 }
 
 @media (max-width: 414px){
-    
+    html{
+        font-size: 30%;
+    }
+
+    .projects__img{
+        width: 55rem;
+    }
+}
+
+@media (max-width: 367px){
+    html{
+        font-size: 25%;
+    }
+
+    .projects__img{
+        width: 55rem;
+    }
+}
+
+@media (max-width: 343px){
+    .projects__img{
+        width: 50rem;
+    }
 }
 
 @media (max-width: 320px){
-   
+    html{
+        font-size: 25%;
+    }
+
+    .projects__img{
+        width: 50rem;
+    }
 }

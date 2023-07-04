@@ -36,18 +36,18 @@ $(document).ready(function() {
 $(document).ready(function() {
   var themeToggle = $('#themeToggle');
   var body = $('body');
-  var currentTheme = 'light-theme';
-  body.addClass('light-theme');
+  var currentTheme = 'dark-theme';
+  body.addClass('dark-theme');
 
   themeToggle.click(function() {
-    if (currentTheme === 'light-theme') {
-      currentTheme = 'dark-theme';
-      body.removeClass('light-theme').addClass('dark-theme');
-      $('#themeToggle').removeClass('bxs-moon').addClass('bxs-sun');;
-    }else {
+    if (currentTheme === 'dark-theme') {
       currentTheme = 'light-theme';
       body.removeClass('dark-theme').addClass('light-theme');
-      $('#themeToggle').removeClass('bxs-sun').addClass('bxs-moon');
+      $('#themeToggle').addClass('bxs-sun').removeClass('bxs-moon');
+    }else {
+      currentTheme = 'dark-theme';
+      body.removeClass('light-theme').addClass('dark-theme');
+      $('#themeToggle').addClass('bxs-moon').removeClass('bxs-sun');
     }
   });
 });
