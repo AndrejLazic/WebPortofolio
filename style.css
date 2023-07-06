@@ -20,10 +20,6 @@
     transition: .5s ease;
 }
 
-.srb {
-    display: none;
-}
-
 ::-webkit-scrollbar{
     display: none;
 }
@@ -51,14 +47,6 @@ span{
 
 /*================= HEADER =================*/
 
-.switch {
-    position: relative;
-    display: inline-block;
-    margin-right: auto;
-    width: 60px;
-    height: 34px;
-}
-
 header{
     position: fixed;
     top: 0;
@@ -66,45 +54,18 @@ header{
     width: 100%;
     padding: 4rem 8rem 2rem 13rem;
     background-color:var(--first-background-color) ;
-    display: none;
+    display: flex;
     align-items: center;
     z-index: 100;
 }
 
-.navigation{
-    
-}
-
-#themeToggle {
+.switch {
     position: relative;
-    cursor: pointer;
-    color: var(--text-color);
-    margin-left: 11rem;
-    width: 4rem;
-    height: 4rem;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 4rem;
-}
-
-header nav a{
-    color: var(--text-color);
-    font-size: 2.9rem;
-    font-weight: 700;
-    margin-right: 5rem;
-}
-
-header nav a:hover{
-    color: var(--accent-color);
-}
-
-.mobile{
-    display: none;
-    position: relative;
-    cursor: pointer;
-    font-size: 8rem;
-    color: var(--text-color);
+    margin-right: auto;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 34px;
 }
 
 .switch input {
@@ -157,6 +118,43 @@ input:checked + .slider:before {
 .slider.round:before {
     border-radius: 50%;
 }
+
+header .navigation a{
+    color: var(--text-color);
+    font-size: 2.9rem;
+    font-weight: 700;
+    margin-right: 5rem;
+}
+
+header nav a:hover{
+    color: var(--accent-color);
+}
+
+#themeToggle {
+    position: relative;
+    cursor: pointer;
+    color: var(--text-color);
+    margin-left: 11rem;
+    width: 4rem;
+    height: 4rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+}
+
+.mobile{
+    display: none;
+    position: relative;
+    cursor: pointer;
+    font-size: 8rem;
+    color: var(--text-color);
+}
+
+.mobile-navigation{
+    display: none;
+}
+
 
 /*================= SECTION =================*/
 
@@ -681,12 +679,27 @@ footer{
         font-size: 60%;
     }
     
-    .navigation{
+    header .navigation{
         display: none;
     }
 
-    .navigation a{
-        display: flex;
+    header .mobile-navigation{
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background-color: var(--first-background-color);
+    }
+
+    header .mobile-navigation a{
+        display: block;
+        font-size: 2rem;
+        color: var(--text-color);
+        font-size: 2.9rem;
+        font-weight: 700;
+        padding: 1rem;
     }
 
     .mobile{
@@ -700,6 +713,10 @@ footer{
 
     .home{
         flex-direction: column;
+    }
+
+    .home .home-left{
+        padding-top: 10rem;
     }
 
     .about{

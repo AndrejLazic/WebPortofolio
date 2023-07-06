@@ -17,6 +17,8 @@ $(document).ready(function() {
 $(document).ready(function() {
   var languageSwitch = $("#languageSwitch");
   var language = "english";
+  var serbian = $('.srb');
+  serbian.hide();
 
   languageSwitch.change(function() {
     if (language === "english") {
@@ -54,9 +56,9 @@ $(document).ready(function() {
 
 $(document).ready(function() {
   var meni = $('#menuToggle');
-  var nav = $(".navigation");
+  var nav = $(".mobile-navigation");
   var switchIcon = 'menu-icon';
-
+  nav.hide();
 
   meni.click(function(){
     if (switchIcon === 'menu-icon') {
@@ -122,6 +124,7 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
+  
     ScrollReveal().reveal('.home-left', { delay: 200, origin: 'top',  distance: '100px', duration: 2000, reset: true});
     ScrollReveal().reveal('.home-right', { delay: 200, origin: 'bottom',  distance: '100px', duration: 2000, reset: true});
     ScrollReveal().reveal('.about-content', { delay: 200, origin: 'left',  distance: '100px', duration: 2000, reset: true});
@@ -129,9 +132,10 @@ $(document).ready(function() {
     ScrollReveal().reveal('.about-age', { delay: 200, origin: 'bottom',  distance: '100px', duration: 2000, reset: true});
     ScrollReveal().reveal('.skill-layout', { delay: 200, origin: 'left',  distance: '100px', duration: 2000, reset: true});
     ScrollReveal().reveal('.skill-text', { delay: 200, origin: 'right',  distance: '100px', duration: 2000, reset: true});
-    ScrollReveal().reveal('.container', { delay: 200, origin: 'right',  distance: '100px', duration: 2000, reset: true});
+    //ScrollReveal().reveal('.container', { delay: 200, origin: 'right',  distance: '100px', duration: 2000, reset: true});
     ScrollReveal().reveal('.naslov', { delay: 200, origin: 'top',  distance: '100px', duration: 2000, reset: true});
-    ScrollReveal().reveal('.form', { delay: 200, origin: 'bottom',  distance: '100px', duration: 2000, reset: true});  
+    ScrollReveal().reveal('.form', { delay: 200, origin: 'bottom',  distance: '100px', duration: 2000, reset: true});
+  
 });
 
 function updateSlidesPerView() {
@@ -145,4 +149,3 @@ function updateSlidesPerView() {
     updateSlidesPerView();
     window.addEventListener('resize', updateSlidesPerView);
 });
-
