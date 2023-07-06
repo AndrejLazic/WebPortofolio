@@ -69,6 +69,9 @@ header{
     display: flex;
     align-items: center;
     z-index: 100;
+}
+
+.navigation{
     
 }
 
@@ -94,6 +97,14 @@ header nav a{
 
 header nav a:hover{
     color: var(--accent-color);
+}
+
+.mobile{
+    display: none;
+    position: relative;
+    cursor: pointer;
+    font-size: 8rem;
+    color: var(--text-color);
 }
 
 .switch input {
@@ -175,7 +186,7 @@ section {
 }
 
 .home-content h2{
-    font-size: 5rem;
+    font-size: 4.4rem;
     font-weight: 600;
 }
 
@@ -185,7 +196,7 @@ section {
 }
 
 .home-content h1{
-    font-size: 5.6rem;
+    font-size: 5rem;
     font-weight: 700;
 }
 
@@ -240,10 +251,13 @@ section {
     justify-content: center;
 }
 
-.home .home-right img{
+.home .home-right .home-blob{
     width: 60rem;
+    fill: var(--accent-color);
+    filter: drop-shadow(0 12px 12px var(--accent-color));
     animation: floatImage 4s ease-in-out infinite;
 }
+
 /*================= ABOUT =================*/
 
 #about{
@@ -666,13 +680,26 @@ footer{
     html{
         font-size: 60%;
     }
-
-    header{
+    
+    .navigation{
         display: none;
     }
-    
+
+    .navigation a{
+        display: flex;
+    }
+
+    .mobile{
+        display: flex;
+    }
+
+    #themeToggle{
+        font-size: 5rem;
+        padding-right: 5rem;
+    }
+
     .home{
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
 
     .about{

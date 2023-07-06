@@ -44,10 +44,29 @@ $(document).ready(function() {
       currentTheme = 'light-theme';
       body.removeClass('dark-theme').addClass('light-theme');
       $('#themeToggle').addClass('bxs-sun').removeClass('bxs-moon');
-    }else {
+    }else{
       currentTheme = 'dark-theme';
       body.removeClass('light-theme').addClass('dark-theme');
       $('#themeToggle').addClass('bxs-moon').removeClass('bxs-sun');
+    }
+  });
+});
+
+$(document).ready(function() {
+  var meni = $('#menuToggle');
+  var nav = $(".navigation");
+  var switchIcon = 'menu-icon';
+
+
+  meni.click(function(){
+    if (switchIcon === 'menu-icon') {
+      switchIcon = 'close-icon';
+      meni.removeClass('bx-menu').addClass('bx-x');
+      nav.show();
+    } else {
+      switchIcon = 'menu-icon';
+      meni.removeClass('bx-x').addClass('bx-menu');
+      nav.hide();
     }
   });
 });
@@ -112,9 +131,7 @@ $(document).ready(function() {
     ScrollReveal().reveal('.skill-text', { delay: 200, origin: 'right',  distance: '100px', duration: 2000, reset: true});
     ScrollReveal().reveal('.container', { delay: 200, origin: 'right',  distance: '100px', duration: 2000, reset: true});
     ScrollReveal().reveal('.naslov', { delay: 200, origin: 'top',  distance: '100px', duration: 2000, reset: true});
-    ScrollReveal().reveal('.form', { delay: 200, origin: 'bottom',  distance: '100px', duration: 2000, reset: true});
-    //ScrollReveal().reveal('.footer', { delay: 200, origin: 'bottom',  distance: '100px', duration: 2000, reset: true});
-  
+    ScrollReveal().reveal('.form', { delay: 200, origin: 'bottom',  distance: '100px', duration: 2000, reset: true});  
 });
 
 function updateSlidesPerView() {
