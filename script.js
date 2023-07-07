@@ -130,9 +130,9 @@ $(document).ready(function() {
     ScrollReveal().reveal('.about-content', { delay: 200, origin: 'left',  distance: '100px', duration: 2000, reset: true});
     ScrollReveal().reveal('.about-image', { delay: 200, origin: 'top',  distance: '100px', duration: 2000, reset: true});
     ScrollReveal().reveal('.about-age', { delay: 200, origin: 'bottom',  distance: '100px', duration: 2000, reset: true});
-    ScrollReveal().reveal('.skill-layout', { delay: 200, origin: 'left',  distance: '100px', duration: 2000, reset: true});
-    ScrollReveal().reveal('.skill-text', { delay: 200, origin: 'right',  distance: '100px', duration: 2000, reset: true});
-    //ScrollReveal().reveal('.container', { delay: 200, origin: 'right',  distance: '100px', duration: 2000, reset: true});
+    ScrollReveal().reveal('.skill-box', { delay: 200, origin: 'top',  distance: '100px', duration: 2000, reset: true});
+    ScrollReveal().reveal('.skill-text', { delay: 200, origin: 'bottom',  distance: '100px', duration: 2000, reset: true});
+    ScrollReveal().reveal('.container', { delay: 200, origin: 'bottom',  distance: '100px', duration: 2000, reset: true});
     ScrollReveal().reveal('.naslov', { delay: 200, origin: 'top',  distance: '100px', duration: 2000, reset: true});
     ScrollReveal().reveal('.form', { delay: 200, origin: 'bottom',  distance: '100px', duration: 2000, reset: true});
   

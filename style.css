@@ -64,8 +64,8 @@ header{
     margin-right: auto;
     top: 0;
     left: 0;
-    width: 60px;
-    height: 34px;
+    width: 6rem;
+    height: 3.5rem;
 }
 
 .switch input {
@@ -89,10 +89,10 @@ header{
 .slider:before {
     position: absolute;
     content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
+    height: 2.8rem;
+    width: 2.8rem;
+    left: .4rem;
+    bottom: .4rem;
     background-image: url(english.jpeg);
     background-size: cover;
     -webkit-transition: .4s;
@@ -104,9 +104,9 @@ input:checked + .slider {
 }
   
 input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
+    -webkit-transform: translateX(2.3rem);
+    -ms-transform: translateX(2.3rem);
+    transform: translateX(2.3rem);
     background-image: url(serbian.jpg);
     background-size: cover;
 }
@@ -840,4 +840,29 @@ footer{
     .projects__img{
         width: 50rem;
     }
+}
+
+@media (max-width: 320px){
+    html{
+        font-size: 23%;
+    }
+
+    .projects__img{
+        width: 45rem;
+    }
+
+    .skill-box{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width: 320px){
+    html{
+        font-size: 20%;
+    }
+
+    .projects__img{
+        width: 45rem;
+    }
+
 }
